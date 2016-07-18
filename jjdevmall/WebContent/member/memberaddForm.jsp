@@ -62,9 +62,6 @@
 			}else if($(".membergender:checked").length == 0){
 				$("#checkGender").text("성별을 선택하세요.");
 				$("#membergender").focus();
-			}else if($("#memberaddress").val() == "" || $("#memberaddress").val().length < 10){
-				$("#checkAddress").text("상세주소를 입력하세요. 반드시 입력해야 합니다.");
-				$("#memberaddress").focus();
 			}else{
 				$("#addAction").submit();
 			}
