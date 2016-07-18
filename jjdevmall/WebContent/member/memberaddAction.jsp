@@ -47,9 +47,9 @@
 		System.out.println(lastKey);
 	}		
 	if(MEMBERADDRESS != null){
-		String sql2 = "insert into address(member_id, member_address) values(?,?)";
+		String sql2 = "insert into address(member_no, member_address) values(?,?)";
 		PreparedStatement stmt2 = conn.prepareStatement(sql2);
-		stmt2.setInt(1, rs.getInt(1));
+		stmt2.setInt(1, lastKey);
 		stmt2.setString(2, MEMBERADDRESS);
 		stmt2.executeUpdate();
 	}
