@@ -71,7 +71,7 @@
 </head>
 <body>
 <h1>회원 가입 화면</h1>
-<form id="addAction" action="<%=request.getContextPath()%>/member/memberAddAction.jsp" method="post">
+<form id="addAction" action="<%= request.getContextPath() %>/member/memberAddAction.jsp" method="post">
 	<div>
 		<label>아이디 : </label>
 		<input type="text" id="memberid" name="memberid">

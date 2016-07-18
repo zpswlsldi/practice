@@ -57,6 +57,7 @@
 			stmt2.setString(2, MEMBERADDRESS);
 			stmt2.executeUpdate();
 		}
+		conn.commit();
 	}catch(Exception e){
 		conn.rollback();
 		e.printStackTrace();

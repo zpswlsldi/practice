@@ -38,6 +38,7 @@
 		stmt.setDouble(3, ITEMRATE);
 		System.out.println(stmt);
 		stmt.executeUpdate();
+		conn.commit();
 	}catch(Exception e){
 		conn.rollback();
 		e.printStackTrace();
