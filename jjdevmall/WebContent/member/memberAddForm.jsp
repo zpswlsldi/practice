@@ -73,29 +73,36 @@
 <h1>회원 가입 화면</h1>
 <form id="addAction" action="<%=request.getContextPath()%>/member/memberAddAction.jsp" method="post">
 	<div>
-		아이디 : <input type="text" id="memberid" name="memberid">
+		<label>아이디 : </label>
+		<input type="text" id="memberid" name="memberid">
 		<span id="checkId"></span>
 	</div>
 	<div>
-		비밀번호 : <input type="password" id="memberpw" name="memberpw">
-		비밀번호 확인 : <input type="password" id="memberpwcheck" name="memberpwcheck">
+		<label>비밀번호 : </label>
+		<input type="password" id="memberpw" name="memberpw">
+		<label>비밀번호 확인 : </label>
+		<input type="password" id="memberpwcheck" name="memberpwcheck">
 		<span id="checkPw"></span>
 	</div>
 	<div>
-		이름 : <input type="text" id="membername" name="membername">
+		<label>이름 : </label>
+		<input type="text" id="membername" name="membername">
 		<span id="checkName"></span>
 	</div>
 	<div>
-		성별 : <input type="radio" class="membergender" name="membergender" value="남">남
+		<label>성별 : </label>
+		<input type="radio" class="membergender" name="membergender" value="남">남
 		<input type="radio" class="membergender" name="membergender" value="여">여
 		<span id="checkGender"></span>
 	</div>
 	<div>
-		나이 : <input type="text" id="memberage" name="memberage">
+		<label>나이 : </label>
+		<input type="text" id="memberage" name="memberage">
 		<span id="checkAge"></span>
 	</div>
 	<div>
-		주소 : <input type="text" id="memberaddress" name="memberaddress">
+		<label>주소 : </label>
+		<input type="text" id="memberaddress" name="memberaddress">
 		<span id="checkAddress"></span>
 	</div>
 	<div>

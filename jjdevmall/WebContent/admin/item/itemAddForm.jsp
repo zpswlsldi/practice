@@ -51,16 +51,19 @@
 </script>
 <body>
 <form id="additem" action="<%=request.getContextPath()%>/item/itemAddAction.jsp" method="post">
-		<div>
-		상품명 : <input type="text" id="itemname" name="itemname">
+	<div>
+		<label>상품명 : </label>
+		<input type="text" id="itemname" name="itemname">
 		<span id="checkitemname"></span>
 	</div>
 	<div>
-		본가 : <input type="text" id="itemprice" name="itemprice">
+		<label>본가 : </label>
+		<input type="text" id="itemprice" name="itemprice">
 		<span id="checkitemprice"></span>
 	</div>
 	<div>
-		할인율 : <input type="text" id="itemrate" name="itemrate">
+		<label>할인율 : </label>
+		<input type="text" id="itemrate" name="itemrate">
 		<span id="checkitemrate"></span>
 	</div>
 	<div>
