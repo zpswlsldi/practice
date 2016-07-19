@@ -10,13 +10,13 @@
 <body>
 <%
 	request.setCharacterEncoding("utf-8");
-	String ITEMNAME = request.getParameter("itemname");
-	int ITEMPRICE = Integer.parseInt(request.getParameter("itemprice"));
-	double ITEMRATE = Double.parseDouble(request.getParameter("itemrate"));
+	String itemName = request.getParameter("itemName");
+	int itemPrice = Integer.parseInt(request.getParameter("itemPrice"));
+	double itemRate = Double.parseDouble(request.getParameter("itemRate"));
 	
-	System.out.println("ITEMNAME is " + ITEMNAME);
-	System.out.println("ITEMPRICE is " + ITEMPRICE);
-	System.out.println("ITEMRATE is " + ITEMRATE);
+	System.out.println("itemName is " + itemName);
+	System.out.println("itemPrice is " + itemPrice);
+	System.out.println("itemRate is " + itemRate);
 	
 	Connection conn = null;
 	PreparedStatement stmt = null;
@@ -33,18 +33,18 @@
 		
 		String sql = "insert into item(item_name,item_price,item_rate) values(?,?,?)";
 		stmt = conn.prepareStatement(sql);
-		stmt.setString(1, ITEMNAME);
-		stmt.setInt(2, ITEMPRICE);
-		stmt.setDouble(3, ITEMRATE);
+		stmt.setString(1, itemName);
+		stmt.setInt(2, itemPrice);
+		stmt.setDouble(3, itemRate);
 		System.out.println(stmt);
 		stmt.executeUpdate();
 		conn.commit();
-	}catch(Exception e){
+	}catch(SQLException e){
 		conn.rollback();
 		e.printStackTrace();
 	}finally{
-		stmt.close();
-		conn.close();
+		if(stmt != null) try{stmt.close();} catch(SQLException ex){}
+		if(conn != null) try{conn.close();} catch(SQLException ex){}
 	}
 %>
 <h1>등록 완료되었습니다.</h1>
